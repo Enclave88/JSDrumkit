@@ -44,35 +44,16 @@
         </div>
     </div>
     
-    <audio data-key="65" src="sounds/clap.wav"></audio>
-    <audio data-key="83" src="sounds/clap.wav"></audio>
-    <audio data-key="68" src="sounds/clap.wav"></audio>
-    <audio data-key="70" src="sounds/clap.wav"></audio>
-    <audio data-key="71" src="sounds/clap.wav"></audio>
-    <audio data-key="72" src="sounds/clap.wav"></audio>
-    <audio data-key="74" src="sounds/clap.wav"></audio>
-    <audio data-key="75" src="sounds/clap.wav"></audio>
-    <audio data-key="76" src="sounds/clap.wav"></audio>
+    <audio data-key="65" src="sounds/707%20CH.wav"></audio>
+    <audio data-key="83" src="sounds/707%20Cowbell.wav"></audio>
+    <audio data-key="68" src="sounds/707%20Kick.wav"></audio>
+    <audio data-key="70" src="sounds/707%20Ride.wav"></audio>
+    <audio data-key="71" src="sounds/707%20Snare.wav"></audio>
+    <audio data-key="72" src="sounds/Blang%20SFX%201.wav"></audio>
+    <audio data-key="74" src="sounds/Grv%20Hit%20Metal.wav"></audio>
+    <audio data-key="75" src="sounds/Importer%20Lazer%20SFX.wav"></audio>
+    <audio data-key="76" src="sounds/SElect%20SFX%202.wav"></audio>
     
 </body>
-<script>
-    function playSound(e) {
-        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-        const key = document.querySelector(`key[data-key="${e.keyCode}"]`);
-        if (!audio) return;
-        audio.currentTime = 0;
-        audio.play();
-        key.classList.add('playing');
-    }
-    
-    function removeTransiotion(e) {
-        if(e.propertyName !== 'transform') return;
-        this.classList.remove('playing');
-    }
-    
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransiotion));
-    
-    window.addEventListener('keydown', playSound)
-</script>
+<script src="play.js"></script>
 </html>
