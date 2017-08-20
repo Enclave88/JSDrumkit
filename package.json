@@ -1,0 +1,23 @@
+{
+  "name": "jsdrumkit",
+  "version": "0.0.1",
+  "description": "This is drum machinka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enclave88/JSDrumkit.git"
+  },
+  "keywords": [
+    "drumkit",
+    "drums"
+  ],
+  "author": "sutangu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enclave88/JSDrumkit/issues"
+  },
+  "homepage": "https://github.com/Enclave88/JSDrumkit#readme"
+}
