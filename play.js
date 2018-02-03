@@ -10,6 +10,7 @@ function playSound(e) {
 
     key.classList.add('playing');
     audio.currentTime = 0;
+    audio.load();
     audio.play();
 }
 
