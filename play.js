@@ -1,9 +1,8 @@
-removeTransition = (e) => {
-    if(e.propertyName !== 'transform') return;
-    e.currentTarget.classList.remove('playing');
+removeTransition = e => {
+    if (e.classList.contains('playing')) e.classList.remove('playing');
 };
 
-playSound = (e) => {
+playSound = e => {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if (!audio) return;
@@ -12,6 +11,7 @@ playSound = (e) => {
     audio.currentTime = 0;
     audio.load();
     audio.play();
+    setTimeout(() => {removeTransition(key)}, 50);
 };
 
 const keys = document.querySelectorAll('.key');
